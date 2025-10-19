@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{console.log('Little Stepping Stones Care Centre website loaded!');});

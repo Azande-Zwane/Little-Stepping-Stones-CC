@@ -1,0 +1,238 @@
+body {
+    font-family:'Nunito',sans-serif;
+    margin: 0;
+    background:#fffbed;
+    color:#333;
+}
+nav {
+    background:linear-gradient(90deg,#FFD700,#1E90FF);
+    display:flex;
+    justify-content:space-between;
+    padding:1em 2em;
+    align-items:center;
+}
+nav .logo{
+    font-weight:700;
+    font-size:1.5em;
+    color:#fff;
+}
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:1em;
+}
+nav ul li a{
+    text-decoration:none;
+    color:#fff;
+    font-weight:600;
+}
+nav ul li a.active,nav ul li a:hover{
+    color:#ffeb3b;
+}
+.hero{
+    text-align:center;
+    padding:4em 2em;
+    background:linear-gradient(to bottom,#FFD700,#1E90FF,#FFF8DC);
+    color:#fff;
+}
+.hero h1{
+    font-size:2.5em;
+}
+.btn{
+    display:inline-block;
+    background:#1E90FF;
+    padding:0.8em 1.5em;
+    border-radius:8px;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
+    margin-top:1em;
+}
+.btn:hover{
+    background:#ffeb3b;
+    color:#333;
+}
+.features{
+    display:flex;
+    justify-content:space-around;
+    padding:2em;
+    flex-wrap:wrap;
+}
+.feature{
+    flex:1 1 250px;
+    text-align:center;
+    margin:1em;
+}
+.feature i{
+    font-size:3em;
+    color:#1E90FF;
+}
+footer{
+    text-align:center;
+    padding:1em;
+    background:linear-gradient(90deg,#FFD700,#1E90FF);
+    color:#fff;
+    margin-top:2em;
+}
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:1em;
+    padding:2em;
+}
+.gallery img{
+    width:100%;
+    border-radius:8px;
+    transition:transform 0.3s ease,box-shadow 0.3s ease;
+    border:4px solid #1E90FF;
+}
+.gallery img:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 15px #FFD700;
+}
+form{
+    display:flex;
+    flex-direction:column;
+    padding:2em;
+    max-width:500px;
+    margin:auto;
+}
+form input,form textarea,form button{
+    margin-bottom:1em;
+    padding:0.8em;
+    border-radius:5px;
+    border:1px solid #ccc;
+}
+form button{
+    background:#1E90FF;
+    border:none;
+    font-weight:bold;
+    cursor:pointer;
+    color:#fff;
+}
+form button:hover{
+    background:#FFD700;
+    color:#333;
+}
+
+
+iframe{
+    border-radius: 5em;
+  border: 4px solid #1E90FF; 
+    border: 5px ;
+    width: 500px;
+    height: 500px;
+    opacity: 0.7;
+    transition: 0.3s ease-in-out;
+    margin: 30px;
+}
+iframe:hover{
+  transform: scale(1.1);
+}
+
+/* === Responsive Design === */
+
+/* For tablets (max width 1024px) */
+@media (max-width: 1024px) {
+  nav ul {
+    gap: 0.5em;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature {
+    max-width: 400px;
+  }
+}
+
+/* For mobile phones (max width 768px) */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .logo {
+    margin-bottom: 0.5em;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+  }
+
+  nav ul li {
+    width: 100%;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 0.5em 0;
+    border-top: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .hero {
+    padding: 2em 1em;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .features {
+    flex-direction: column;
+    padding: 1em;
+  }
+
+  .feature {
+    margin: 1em 0;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    width: 90%;
+    padding: 1em;
+  }
+}
+
+/* Gallery  */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 1em; /* space between images */
+  padding: 2em;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* keeps images nicely cropped */
+  border-radius: 8px;
+  border: 4px solid #1E90FF; /* blue border for color scheme */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #FFD700; /* gold glow on hover */
+}
+
+/* Tablet breakpoint - stack into 2 columns */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile breakpoint - stack into 1 column */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
